@@ -1,0 +1,48 @@
+/* Membuat body flex dengan scrollable */
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #f9f9f9;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Mengatur konten berada di atas */
+  overflow-y: auto; /* Mengaktifkan scroll vertikal jika diperlukan */
+  padding: 20px;
+}
+
+/* Untuk membuat container utama menjadi scrollable */
+.context {
+  width: 100%;
+  max-width: 100%;
+  min-height: 100vh; /* Pastikan ini minimal setinggi layar */
+  overflow-y: auto; /* Agar konten bisa digulir */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.no-border {
+  border-top: none;
+  border-right: none;
+  border-left: none;
+}
+
+h1 {
+  color: #333;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+/* Responsif untuk perangkat kecil */
+@media (max-width: 767px) {
+  .card-body {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .container {
+    padding: 0 15px;
+  }
+}
